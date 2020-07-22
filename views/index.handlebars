@@ -1,0 +1,187 @@
+
+</div>
+<div class="ParallaxContent1">
+  <h1 class="text-center" style="margin-top: 22%">
+  <img src="img/itlogow.png" height="60"></img>
+</h1>
+</div>
+<div class="ParallaxContent bg-gradient-dark" id="Pemesanan">
+  <h1 class="text-center text-white">Pemesanan Tiket</h1>
+  <form action="/tiket" method="POST">
+  <h2> </h2>
+  <section class="grid">
+  <div class="row text-center">
+        <div class="col">
+        </div>
+        <div class="col" >
+        <select class="form-control" id="sel1" name="st1">
+        {{#each results}}
+        <option>{{ namstat }}</option>
+        {{/each}}
+      </select>
+        </div>
+        <div class="col" >
+        <select class="form-control" id="sel2" name="st2">
+        {{#each results}}
+        <option>{{ namstat }}</option>
+        {{/each}}
+      </select>
+
+        </div>
+        <div class="col">
+        </div>
+  </div>
+  <h3> </h3>
+  <h1 class="text-center text-white ">
+      <button type="submit" class="btn btn-warning btn-lg text-white">Cari</button>
+  </h1>
+</form>
+  </section>
+</div>
+  <div class="ParallaxContent1 text-white text-center">
+       
+  <section class="grid" id="Tentang">
+  <div ng-app="">
+
+   <div class="row" style="margin-top: 15px">
+    <div class="col"></div>
+    <div class="col-8">
+    <div class="card text-white bg-dark" style="width: auto;" >
+      <form style="margin-top: 15px">
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-dark active">
+      <input type="radio" ng-model="myVar" value="main" name="x"
+      style="margin-right:5px " ng-checked="true" >Utama</label>
+      <label class="btn btn-dark ">
+      <input type="radio" ng-model="myVar" value="logo" name="x" style="margin-right:5px">Arti Logo</label>
+      <label class="btn btn-dark">
+      <input type="radio" ng-model="myVar" value="visi" name="x" style="margin-right:5px">Visi Misi
+      </label>
+      <label class="btn btn-dark">
+      <input type="radio" ng-model="myVar" value="org" name="x" style="margin-right:5px">Struktur Organisasi
+      </label>
+      </div>
+      </form>
+    <div class="card-body"><div ng-switch="myVar">
+    <div ng-switch-when="main" >
+    <h3 class="text-center">Tentang PT.Kereta Api Indonesia</h3>
+    <p class="card-text">PT Kereta Api Indonesia (Persero) merupakan satu-satunya Badan Usaha Milik Negara (BUMN) perkeretaapian di Indonesia. PT KAI (Persero) sebagai perusahaan yang dimiliki sepenuhnya oleh negara secara konsisten menerapkan prinsip transparansi, akuntabilitas, tanggung jawab kemandirian, dan profesionalisme dalam mengelola menjalankan bisnisnya dengan tetap berpedoman pada Peraturan Perundang-undangan yang berlaku.
+    Penerapan Good Corporate Governance (GCG) di PT KAI (Persero) sebagai suatu sistem dan struktur untuk mengatur bagaimana perusahaan dikelola bertujuan untuk meningkatkan daya saing dan keberlanjutan usaha. Dengan adanya pembagian fungsi, hak, kewajiban, dan tanggung jawab pihak yang berkepentingan secara jelas memberikan landasan untuk kepastian seluruh proses dan mekanisme dilakukan baik untuk mencapai tujuan perusahaan serta mencegah penyimpangan dan risiko yang dapat mengakibatkan kegagalan pencapaian tujuan perusahaan. Selain dimaksudkan untuk mengarahkan dan mengendalikan perusahaan dalam mencapai tujuan yang telah ditetapkan, penerapan prinsip GCG juga dimaksudkan untuk memperhatikan keseimbangan antara hak dan kewajiban stakeholders. Penerapan GCG juga mempercepat PT KAI (Persero) dalam membentuk budaya perusahaan yaitu integritas, profesionalisme, keselamatan, inovasi, dan pelayanan prima dilingkungan usahanya.</p></div>
+    <div ng-switch-when="logo">
+    <img src="img/itlogo.png" alt="Card image cap" style="margin-bottom: 10px">
+    <p class="card-text">Garis melengkung: Melambangkan gerakan yang dinamis PT KAI dalam mencapai Visi dan Misinya.</p>
+    <p class="card-text">Anak Panah: Melambangkan Nilai Integritas, yang harus dimiliki insan PT KAI dalam mewujudkan Pelayanan Prima.</p>
+    <p class="card-text">Orange: Melambangkan proses Pelayanan Prima (Kepuasan Pelanggan) yang ditujukan kepada pelanggan internal dan eksternal.</p>
+    <p class="card-text">Biru: Melambangkan semangat Inovasi yang harus dilakukan dalam memberikan nilai tambah ke stakeholders. Inovasi dilakukan dengan semangat sinergi di semua bidang dan dimulai dari hal yang paling kecil sehingga dapat melesat.</p>
+    </div>
+    <div ng-switch-when="visi">
+    <p class="card-text">Visi menjadi penyedia jasa perkeretaapian terbaik yang fokus pada pelayanan pelanggan dan memenuhi harapan stakeholders.</p>
+    <p class="card-text">Misi menyelenggarakan bisnis perkeretaapian dan bisnis usaha penunjangnya, melalui praktek bisnis dan model organisasi terbaik untuk memberikan nilai tambah yang tinggi bagi stakeholders dan kelestarian lingkungan berdasarkan 4 pilar utama : Keselamatan, Ketepatan waktu, Pelayanan dan Kenyamanan.</p>
+    </div>
+    <div ng-switch-when="org">
+      <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Nama</th>
+              <th scope="col">NIM</th>
+              <th scope="col">Tugas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><img src="http://amikom.ac.id/public/fotomhs/2018/18_11_2362.jpg" height="90"></th>
+              <td>Ferry DwiZulkhifli</td>
+              <td>18.11.2362</td>
+              <td>Backend</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="http://amikom.ac.id/public/fotomhs/2018/18_11_2359.jpg" height="100"></th>
+              <td>Gianest Kiki</td>
+              <td>18.11.2359</td>
+              <td>Frontend</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="http://amikom.ac.id/public/fotomhs/2018/18_11_2360.jpg" height="90"></th>
+              <td>Muhammad Jayadi Saputra</td>
+              <td>18.11.2360</td>
+              <td>Frontend</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="http://amikom.ac.id/public/fotomhs/2018/18_11_2361.jpg" height="90"></th>
+              <td>Faqih Primawan</td>
+              <td>18.11.2361</td>
+              <td>UI/UX</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="http://amikom.ac.id/public/fotomhs/2018/18_11_2357.jpg" height="100"></th>
+              <td>Riyonaldi</td>
+              <td>18.11.2357</td>
+              <td>Resource Supplier</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="http://amikom.ac.id/public/fotomhs/2018/18_11_2356.jpg" height="105"></th>
+              <td>Feberiani clarita Marey</td>
+              <td>18.11.2356</td>
+              <td>Resource Supplier</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div ng-switch-default>
+    <h3 class="text-center">Tentang PT.Kereta Api Indonesia</h3>
+    <p class="card-text">PT Kereta Api Indonesia (Persero) merupakan satu-satunya Badan Usaha Milik Negara (BUMN) perkeretaapian di Indonesia. PT KAI (Persero) sebagai perusahaan yang dimiliki sepenuhnya oleh negara secara konsisten menerapkan prinsip transparansi, akuntabilitas, tanggung jawab kemandirian, dan profesionalisme dalam mengelola menjalankan bisnisnya dengan tetap berpedoman pada Peraturan Perundang-undangan yang berlaku.
+    Penerapan Good Corporate Governance (GCG) di PT KAI (Persero) sebagai suatu sistem dan struktur untuk mengatur bagaimana perusahaan dikelola bertujuan untuk meningkatkan daya saing dan keberlanjutan usaha. Dengan adanya pembagian fungsi, hak, kewajiban, dan tanggung jawab pihak yang berkepentingan secara jelas memberikan landasan untuk kepastian seluruh proses dan mekanisme dilakukan baik untuk mencapai tujuan perusahaan serta mencegah penyimpangan dan risiko yang dapat mengakibatkan kegagalan pencapaian tujuan perusahaan. Selain dimaksudkan untuk mengarahkan dan mengendalikan perusahaan dalam mencapai tujuan yang telah ditetapkan, penerapan prinsip GCG juga dimaksudkan untuk memperhatikan keseimbangan antara hak dan kewajiban stakeholders. Penerapan GCG juga mempercepat PT KAI (Persero) dalam membentuk budaya perusahaan yaitu integritas, profesionalisme, keselamatan, inovasi, dan pelayanan prima dilingkungan usahanya.</p></div>
+    </div></div>
+   </div>
+   </div>
+   <div class="col-2"></div>
+  </div>
+</div>
+  </section>
+  <h1> </h1>
+  </div>
+<div class="ParallaxContentx bg-gradient-dark">
+ <h1 class="text-center text-white" style="margin-bottom: 20px" id="Layanan">Layanan</h1>
+  <section class="grid">
+   <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <div class="card text-white bg-dark" style="width: auto;">
+  <img class="card-img-top" src="img/galeri_interioreko.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Kereta Penumpang</h5>
+    <p class="card-text">Sebagai perusahaan yang mengelola perkeretaapian di Indonesia, PT. Kereta Api Indonesia (Persero) telah banyak mengoperasikan KA penumpangnya, baik KA Utama (Komersil dan Non Komersil), maupun KA Lokal di Jawa dan Sumatera.</p>
+  </div>
+</div></div>
+      <div class="col"><div class="card text-white bg-dark" style="width: auto;">
+  <img class="card-img-top" src="img/galeri_kapelabuhan.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Kereta Barang</h5>
+    <p class="card-text">Komoditi yang dapat dilayani pada angkutan barang, diantaranya :</p>
+    <p class="card-text">Petikemas</p>
+    <p class="card-text">Barang curah Liquid/ Cair</p>
+    <p class="card-text">Barang curah</p>
+    <p class="card-text">Barang retail</p>
+    <p class="card-text">Barang packaging</p>
+  </div>
+</div></div>
+      <div class="col"><div class="card text-white bg-dark" style="width: auto;">
+  <img class="card-img-top" src="img/galeri_stasiun_jebres1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Aset Bangunan</h5>
+    <p class="card-text">Untuk melakukan sewa aset PT. Kereta Api Indonesia (Persero) anda mengikuti prosedur sewa.
+Aset yang dapat disewa terdiri dari Aset Railway dan Aset Non Railway
+Mengajukan permohonan sewa ke Manager komersial di daerah operasi terdekat.
+</p>
+  </div>
+</div></div>
+      <div class="col"></div>
+   </div>
+ </section>
+</div>
+<div class="ParallaxVideo">
+  <img src="img/itparallax-tentang1.jpg">
+  </img>
+</div>
+

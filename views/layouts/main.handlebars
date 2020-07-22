@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/paralax.css" rel="stylesheet">
+</head >
+
+<body class= "bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="img/itlogosgl.png"  height="60" class="d-inline-block align-center" alt="" loading="lazy">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  	<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/#">Beranda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#Pemesanan">Pemesanan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#Tentang">Tentang</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#Layanan">Layanan</a>
+      </li>
+    </ul>
+    {{#if (lgform)}}
+    <form class="form-inline" >
+       <button class="btn btn-sm btn-danger delete" href="/logout">Keluar</button>
+    </form>
+    {{else}}
+     <form class="form-inline"  method="POST" id="formlog">
+        <input class="form-control mr-sm-2" type="text" placeholder="email" name="username" >
+        <input class="form-control mr-sm-2" type="password" placeholder="Password" name="password">
+        <div class="btn-group">
+      <button type="submit" class="btn btn-primary" formaction="/auth">Masuk</button>
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="submit" formaction="/daftar">Daftar</button>
+      </div>
+    </form>
+    {{/if}}
+  </div>
+</nav>
+<div class="ParallaxVideo">
+    <video autoplay muted loop>
+        <source src="img/stock1.mp4">
+    </video>
+	{{{body}}}
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+</html>
